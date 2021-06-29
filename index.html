@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            background-color: #6200EE;
+            padding: 0px 30px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255, 0.60);
+            line-height: 50px;
+            padding: 8px 20px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: rgb(255, 255, 255, 0.87);
+        }
+
+        .navbar li {
+            list-style: none;
+            display: inline-block;
+
+
+        }
+
+        .navbar .right span {
+            color: rgba(49, 14, 14, 0.87);
+            margin-top: 12px;
+            display: none;
+        }
+
+        @media screen and (max-width:500px) {
+
+
+
+
+
+            .navbar {
+                flex-direction:row;
+                transition:0.8s;
+            }
+
+
+
+
+            .navlistMobile {
+                display: none;
+            }
+
+            .navbarMobile {
+                height: 200px;
+                flex-direction: row;
+                
+
+            }
+
+            .navbar .right .spanMobile {
+
+                display: block;
+            }
+
+
+
+            .navbar li {
+
+                display: block;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar" id="navID">
+        <ul class="navlist navlistMobile" id="navlistID">
+            <li class="navitem"><a href="./mediaquery.html" class="active">Home</a></li>
+            <li class="navitem"><a href="./about.html">About</a></li>
+            <li class="navitem"><a href="">Blog</a></li>
+            <li class="navitem"><a href="">Contact</a></li>
+        </ul>
+        <div class="right"><span id="menuID" onclick="MenuToggle()" class="material-icons spanMobile">menu</span></div>
+    </nav>
+
+    <script>
+
+
+        var navID = document.getElementById("navID");
+        var navlistID = document.getElementById("navlistID");
+
+        function MenuToggle() {
+
+
+            navID.classList.toggle("navbarMobile");
+            navlistID.classList.toggle("navlistMobile");
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
