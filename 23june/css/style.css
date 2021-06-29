@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+body{
+    font-family: 'Maven Pro', sans-serif;
+}
+/* .nav-bar{ 
+    width:100%;
+    background-color: skyblue;
+    height:55px;
+}
+.nav-bar h2{
+    background-color: slategray;
+    width:800px;
+    margin-left: 30px;
+    padding:5px;
+    color:white;
+    display: inline-block;
+}
+.nav-bar .nav-list{
+    display:inline-block;
+}
+.nav-bar .nav-list li{
+    display: inline;
+}*/
+.nav-bar h2{
+     display:inline-block;
+  
+    padding:14px;
+    width:800px;
+    cursor: pointer;
+}
+.nav-bar h2:hover{
+    display:inline-block;
+   background-color:rgb(139, 97, 97);
+  border-radius:20px;
+  transition: all 2s;
+}
+nav{
+    
+    height:55px;
+    border-radius: 5px ;
+    
+}
+.nav-bar .nav-list{
+    display:inline-block;
+}
+.nav-bar .nav-list li{
+    display: inline-block;
+    background-color: cornflowerblue;
+    padding:10px;
+    margin-left:20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size:15px;
+    
+}
+.nav-bar li a{
+    text-decoration: none;
+    color:white;
+    
+  
+}
+.nav-bar li:hover{
+    text-decoration: none;
+    color:white;
+    background-color:crimson;
+    
+    transition: all 1s;
+  
+}
+.nav-bar .nav-list .active{
+    background-color: darkblue;
+}
