@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: chartreuse;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 30px;
+            transition: all 0.8s;
+        }
+
+        .navbar h2 {
+            line-height: 60px;
+            cursor: pointer;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            padding:20px 20px;
+            margin: 0px -2px;
+            color:white;
+            transition: all 0.2s;
+
+        }
+
+        .navbar ul li a.active,
+        .navbar ul li a:hover {
+            text-decoration: none;
+            
+    
+            background-color: rgb(47, 83, 150);
+            color: black;
+
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            line-height: 60px;
+        }
+
+        .navbarmenuclass {
+            display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .navbarmenuclass {
+                display: block;
+            }
+
+            .navbar ul {
+
+                position: absolute;
+                top: 70px;
+
+
+            }
+
+            .navbar ul li {
+
+                display: block;
+
+            }
+
+             
+
+            .navbarflow {
+                height: 320px;
+            }
+            .navbar ul li a{
+                padding: 7px 5px;
+            }
+
+            .navbar ul li a.active,
+            .navbar ul li a:hover {
+                
+                background-color: chartreuse;
+                
+
+            }
+
+        }
+
+        /* * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            height: 55px;
+            background-color: red;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 30px;
+            position: relative;
+            transition: 0.7s;
+        }
+
+        .navbar h2 {
+            line-height: 55px;
+            color: white;
+
+        }
+
+        .navbar ul li {
+            display: inline-block;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+
+            line-height: 55px;
+            color: #eedede;
+
+            padding: 20px 20px;
+            margin: 0px -2px;
+
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background-color: rgb(247, 132, 132);
+            color: rgba(0, 0, 0, 0.685);
+        }
+
+        .navbar-menu {
+            display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .navbar-menu {
+                display: block;
+                cursor: pointer;
+            }
+
+            .navbar ul {
+                position: absolute;
+                top: 50px;
+            }
+
+            .navbar ul li a {
+                padding: 7px 5px;
+            }
+
+            .navbar ul li {
+                display: block;
+            }
+
+            .navbar ul li a:hover,
+            .navbar ul li a.active {
+                background-color: rgb(218, 168, 168);
+                color: rgba(10, 9, 9, 0.685);
+            }
+
+
+            .navbartoggle {
+                height: 280px;
+
+            }
+
+            /* .navbartoggle1 {
+                height:280px;
+                background-color: blueviolet;
+            }
+
+            .navbartoggle2 {
+                color:white;
+            } */
+        }
+
+        */
+    </style>
+</head>
+
+<body>
+    <!-- my code-->
+    <nav class="navbar" id=navId>
+        <h2>Title</h2>
+        <ul class="navlist">
+            <li class="navitem "> <a href="#" class="active">Home</a></li>
+            <li class="navitem"> <a href="#">About Us</a></li>
+            <li class="navitem"> <a href="#">Contact</a></li>
+            <li class="navitem"> <a href="#">Pages for you</a></li>
+        </ul>
+        <span class="material-icons navbarmenuclass" style="color:black; line-height: 60px; cursor: pointer;"
+            id="menubarid">menu</span>
+    </nav>
+    <script>
+        document.getElementById("menubarid").addEventListener('click', () => {
+            document.getElementById("navId").classList.toggle("navbarflow");
+        });
+    </script>
+
+
+</body>
+
+</html>

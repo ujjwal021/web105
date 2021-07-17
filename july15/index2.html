@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            height: 55px;
+            background-color: red;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 30px;
+            position: relative;
+            transition: 0.7s;
+        }
+
+        .navbar h2 {
+            line-height: 55px;
+            color: white;
+
+        }
+
+        .navbar ul li {
+            display: inline-block;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+
+            line-height: 55px;
+            color: #eedede;
+
+            padding: 20px 20px;
+            margin: 0px -2px;
+
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background-color: rgb(247, 132, 132);
+            color: rgba(0, 0, 0, 0.685);
+        }
+
+        .navbar-menu {
+            display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .navbar-menu {
+                display: block;
+                cursor: pointer;
+            }
+            .navbar ul{
+                position: absolute;
+                top: 50px;
+               
+               
+            }
+            .navbar ul li a {
+                padding: 7px 4px;
+            }
+            .navbar ul li{
+               display: block;
+            }
+            .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background-color: red;
+            color: rgba(0, 0, 0, 0.685);
+        }
+
+
+            .navbartoggle{
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <h2>NavBar</h2>
+
+        <ul class="navlist">
+            <li class="navitem"> <a href="" class="active">Home</a> </li>
+            <li class="navitem"> <a href="">About</a> </li>
+            <li class="navitem"> <a href="">Blog</a> </li>
+            <li class="navitem"> <a href="">ContactUs</a> </li>
+        </ul>
+
+        <span class="material-icons navbar-menu" style="color: white;line-height: 55px;" id="menuID">menu</span>
+
+    </nav>
+
+
+    <script>
+
+        let navID =document.getElementsByClassName("navbar");
+       document.getElementById("menuID").addEventListener('click', ()=>{
+
+            navID[0].classList.toggle("navbartoggle");
+       });
+    </script>
+</body>
+
+</html>
