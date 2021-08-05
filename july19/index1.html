@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <title>this is carousel/slider </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+        body {
+            background-image: url("./images/naturegif.gif");
+        } */
+
+        body {
+            background-color: black;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 0px 20px;
+            position: relative;
+
+            transition: 0.8s;
+            overflow: hidden;
+
+
+        }
+
+
+        .navbar h2 {
+            line-height: 60px;
+            color: darkslateblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            list-style: none;
+            line-height: 60px;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            padding: 10px 20px;
+            color: red;
+            font-size: larger;
+
+        }
+
+        .navbar ul li .active {
+
+            color: black;
+
+        }
+
+        .navbar ul li a:hover {
+
+            color: black;
+
+        }
+
+        .navbar span {
+            font-size: 20px;
+            line-height: 60px;
+            display: none;
+
+        }
+
+
+        .text p {
+            padding: 20px;
+            font-family: 'Patrick Hand', cursive;
+            color: white;
+            text-align: start;
+
+        }
+
+        @media screen and (max-width:530px) {
+            .navbar span {
+
+                display: block;
+
+            }
+
+            /* body {
+                 background-image:url('./images/naturegif.gif');
+                 
+              
+               
+            } */
+
+            .navbar ul {
+                position: absolute;
+                top: 45px;
+                z-index: 35;
+            }
+
+            .navbar ul li {
+                display: block;
+
+
+            }
+
+            .navbar ul li a {
+                padding: 2px 0px;
+                color: white;
+
+            }
+
+            .navbarflow {
+                height: 350px;
+            }
+
+
+        }
+
+
+
+        .slides {
+            position: relative;
+            height: 500px;
+            width: 85%;
+            background-color: deepskyblue;
+            margin: auto;
+
+        }
+
+        .slides .slide-list {
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+
+
+
+
+        }
+
+        .slides .active {
+            display: block;
+        }
+
+        .slides .slide-list img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slides .arrows {
+            position: absolute;
+            z-index: 10;
+            top: 230px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .slides .arrows span {
+            padding: 20px;
+            color: yellow;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+
+        .slides .arrows span:hover {
+            background-color: rgba(238, 130, 238, 0.329);
+        }
+
+        .slides .dots {
+            position: absolute;
+            bottom: 20px;
+            z-index: 20;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .slides .dots .dot {
+            width: 15px;
+            height: 15px;
+            background-color: rgba(8, 8, 8, 0.5);
+            border-radius: 100%;
+            margin: 10px;
+        }
+
+        .slides .dots .dot:hover {
+            background-color: blueviolet;
+        }
+
+        .slides .dots .active1 {
+            background-color: blueviolet;
+        }
+
+        .slides .displaynumber {
+            position: absolute;
+            z-index: 30;
+            background-color: rgba(128, 255, 0, 0.356);
+            padding: 20px;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar" id="navId">
+        <h2>meranature.com : )</h2>
+
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">vlog</a></li>
+            <li><a href="#">blog</a></li>
+        </ul>
+        <span class="fa fa-bars" onclick="menutoggle()"></span>
+    </div>
+    <div class="slides">
+        <div class="slide-list active">
+            <img src="./images/searocks.jpeg" alt="">
+        </div>
+        <div class="slide-list">
+            <img src="./images/nightmountain.jpeg" alt="">
+        </div>
+        <div class="slide-list">
+            <img src="./images/moonsky.jpeg" alt="">
+        </div>
+        <div class="slide-list">
+            <img src="./images/nainitalmountain.jpeg" alt="">
+        </div>
+        <div class="slide-list">
+            <img src="./images/nainilake.jpeg" alt="">
+        </div>
+
+        <div class="arrows">
+            <span class="prev" onclick="backward();">&#10094</span>
+            <span class="next" onclick="forward();">&#10095</span>
+        </div>
+
+        <div class="dots">
+            <div class="dot active1" onclick="listEnable(0)"></div>
+            <div class="dot" onclick="listEnable(1)"></div>
+            <div class="dot" onclick="listEnable(2)"></div>
+            <div class="dot" onclick="listEnable(3)"></div>
+            <div class="dot" onclick="listEnable(4)"></div>
+        </div>
+
+        <div class="displaynumber">
+            0 / 5
+        </div>
+
+    </div>
+
+    <div class="text" style="width: 80%; margin: auto;">
+        <p>hai im ujjwal and i have created this slider
+            i like designing websites and i like to create new things
+            i like JS ,PHP and the databases like MYSQL
+            currently iam working on php,mysql and going through various queries
+            which makes our life simple and easy
+            i am from Hyderabad and i study in Ameerpet at Androbim
+        </p>
+    </div>
+
+    <script>
+        let current = 4;
+        function forward() {
+            if (current == 4) {
+                current = 0;
+                // alert(current);
+                listEnable(current);
+            }
+            else {
+                current = current + 1;
+                // alert(current);
+                listEnable(current);
+            }
+        }
+
+        function backward() {
+            if (current == 0) {
+                current = 4;
+                // alert(current);
+                listEnable(current);
+            }
+            else {
+                current = current - 1;
+                // alert(current);
+                listEnable(current);
+            }
+        }
+        function listEnable(a1) {
+
+            let slidelist = document.getElementsByClassName("slide-list");
+            let dots = document.getElementsByClassName("dot");
+            let displaynum = document.getElementsByClassName("displaynumber");
+            for (let i = 0; i < 5; i++) {
+                slidelist[i].classList.remove("active");
+                dots[i].classList.remove("active1");
+
+            }
+            slidelist[a1].classList.add("active");
+            dots[a1].classList.add("active1");
+            displaynum[0].innerHTML = a1 + " / 5";
+
+        }
+        function menutoggle() {
+            document.getElementById("navId").classList.toggle("navbarflow");
+        }
+
+    </script>
+
+</body>
+
+</html>
