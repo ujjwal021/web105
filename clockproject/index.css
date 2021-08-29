@@ -8,7 +8,7 @@
     background:linear-gradient(to bottom, rgba(224, 224, 7, 0.747), rgba(116, 26, 168, 0.884)), url(clockimg.jpeg) no-repeat;
     background-size:100%;
     margin: auto;
-    border: 12px solid black;
+    border: 8px solid black;
  
 } 
 #hour,#minute,#second{
