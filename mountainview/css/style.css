@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:monospace;
+}
+.header-wrapper
+{
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/slide01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding:20px 0px;
+
+}
+.header-wrapper .nav
+{
+    display: flex;
+    justify-content: space-between;
+    height:40px;
+  
+
+}
+.header-wrapper .nav h3
+{
+   line-height: 40px;
+   padding-left: 10px;
+   color: white;
+   
+}
+.header-wrapper .nav a
+{
+   line-height: 40px;
+   padding-right: 10px;
+   color: white;
+   font-size:20px;
+}
+.header-wrapper .nav span
+{
+    font-weight:lighter;
+    color: yellow;
+}
+.container{
+    width:70%;
+    height: 50%;
+
+    margin: 0 auto;
+    margin-top:10%;
+    text-align: center;
+    color: white;
+}
+.container p{
+   margin-bottom:50px;
+   color: yellow;
+}
+.container hr{
+     width:50%;
+     margin: auto;
+     margin-bottom: 20px;
+ }
+ .container h1{
+    margin-bottom:50px;
+}
+/* second section starts here */
+.full-wrapper
+{
+    width: 100%;
+    padding:30px 0px;
+}
+.full-wrapper .fixed-width
+{
+    width:80%;
+    margin: auto;
+  
+    padding:30px;
+    text-align: center;
+}
+.clearfix::after
+{   
+    content: "";
+    display:block;
+    clear: both;
+}
+.full-wrapper .fixed-width .left
+{
+    width:45%;
+    
+    background-color: green;
+    
+    float: left;
+    
+}
+.full-wrapper .fixed-width .left p ,.full-wrapper .fixed-width .right p
+{
+    text-align: left;
+    padding:20px 0px;
+    
+}
+.full-wrapper .fixed-width .left h2 ,.full-wrapper .fixed-width .right h2
+{
+
+    padding:30px 0px;
+    
+}
+.full-wrapper .fixed-width .right
+{
+    width:45%;
+    background-color: greenyellow;
+    float:right;
+}
+
+.two-section img
+{
+    width: 100%;
+}
+.two-section button
+{
+    width:30%;
+    height:30%;
+    padding:10px;
+    margin-bottom: 20px;
+
+    
+}
+.full-quote
+{
+    background-image: url('../images/slide04.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.full-quote
+{
+    text-align: center;
+}
+.full-quote p,h2
+{
+    color: white;
+    padding:20px;
+}
+.full-quote hr
+{
+    width: 50%;
+    margin:auto;
+}
+.four-img-section h2,p
+{
+    color: black;
+    padding:20px;
+    text-align: center;
+}
+.four-img-section hr
+{
+    width: 50%;
+    margin:auto;
+}
+.fourimages img 
+{
+    width:40%;
+    padding: 20px;
+
+    
+}
+/* .fourimages .left-images
+{
+    background-color: blueviolet;
+    
+}
+.fourimages .right-images
+{
+    background-color: rgb(156, 226, 43);
+    
+} */
+.footer
+{
+    background-color: black;
+}
+.footer span
+{
+    font-size: 30px;
+    margin-left: 10px;
+    color: white;
+}
+.footer p
+{
+    
+    color: white;
+}
+
+@media screen  and (max-width:980px)
+{
+
+    .full-wrapper .fixed-width .left
+  {
+    width:100%;
+    
+    
+  }
+.full-wrapper .fixed-width .right
+ { 
+    width:100%;
+    
+ }
+ .fourimages img 
+{
+    width:100%;
+}
+.footer span
+{
+    font-size:20px;
+}
+    
+}
+ 
+
