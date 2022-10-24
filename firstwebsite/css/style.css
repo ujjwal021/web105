@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper
+{
+    width:100%;
+    height: 150px;
+    background-color: skyblue;
+}
+.navbar
+{
+    width: 960px;
+    height: 150px;
+
+   margin: 0 auto;
+}
+.logo
+{
+    width:300px;
+    height: 100px;
+    background-color: blue;
+    float: left;
+}
+.navbar ul
+{
+    float: right;
+    display: flex;
+    list-style-type: none;
+    margin-top: 60px;
+}
+.navbar ul li a
+{
+   text-decoration:none;
+   color: black;
+   padding:10px 50px;
+   background-color: blueviolet;
+   margin-left: 10px;
+}
+
+.logo h1
+{
+    color: white;
+     position: relative;
+     top: 30px;
+     font-size: 60px;
+ }
+
+.master {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.cyan {
+    width: 960px;
+    height: 355px;
+    background-color: white;
+    border: 2px solid black;
+
+
+}
+
+.cyan img {
+    float: left;
+}
+
+.cyan h1 {
+    float: right;
+    margin-right: 150px;
+    margin-top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.box {
+    width: 210px;
+    padding: 10px;
+    margin-top: 20px;
+    float: left;
+
+}
+
+.box img {
+    border: 5px solid aqua;
+    margin-top: 30px;
+}
+
+.box h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+.box2
+{
+    width: 450px;
+
+    clear: both;
+    float: left;
+    border: 2px solid gray;
+}
+.box2 img
+{
+    float: left;
+}
+.box2 h2
+{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+float: right;
+margin-right: 50px;
+}
+.box2 p{
+    padding:20px;
+    clear: both;
+    
+}
+.box3
+{
+    width:450px;
+    
+    float: left;
+    border: 2px solid gray;
+    margin-left:40px;
+}
+.box3 p{
+    padding: 20px;
+}
+.featured
+{
+    width: 200px;
+    height: 20px;
+    background-color: blue;
+    color: white;
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+.footer
+{
+    width: 100%;
+    height: 150px;
+    background-color: skyblue;
+    clear: both;
+}
+.footer-contents
+{
+    width: 960px;
+    height:150px;
+    margin: 0 auto;
+}
+.footer-contents p
+{ 
+float: left;
+position: relative;
+top: 50px;
+    
+}
+.social
+{
+    float: right;
+    color: white;
+    position: relative;
+    top: 50px;
+
+}
+.footer-contents span
+{
+    padding:10px 20px;
+}
