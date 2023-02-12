@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sirs slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            height: 55px;
+            background-color: red;
+        }
+
+        .navbar h2 {
+            color: white;
+            line-height: 55px;
+            padding-left: 30px;
+        }
+
+        .slides {
+            height: 500px;
+            width: 40%;
+            background-color: rgb(207, 207, 73);
+            position: relative;
+            margin: auto;
+
+        }
+
+        .slides .arrows {
+
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            height: 100px;
+            padding-top: 180px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .slides .arrows span {
+            cursor: pointer;
+            padding: 20px;
+            color: white;
+        }
+
+        .slides .slide-list {
+            position: absolute;
+            z-index: 2;
+            background-color: blue;
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+
+        .slides .slide-list img {
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .slides .active {
+
+            display: block;
+        }
+
+        .slides .dots {
+            position: absolute;
+            bottom: 30px;
+            z-index: 10;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .slides .dots .dot {
+            height: 16px;
+            width: 16px;
+            margin: 0px 10px;
+            border-radius: 100px;
+            background-color: rgb(187, 119, 119);
+            cursor: pointer;
+
+        }
+
+        .slides .dots .dot.active1 {
+
+            background-color: rgb(245, 225, 225);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>NavBar</h2>
+
+    </nav>
+
+    <div class="slides">
+        <div class="slide-list active">
+
+            <img src="./img/img4.jpg" alt="">
+
+        </div>
+
+        <div class="slide-list">
+
+            <img src="./img/img5.jpg" alt="">
+
+        </div>
+
+        <div class="slide-list">
+
+            <img src="./img/img6.jpg" alt="">
+
+        </div>
+
+        <div class="slide-list">
+
+            <img src="./img/img7.jpg" alt="">
+
+        </div>
+
+        <div class="arrows">
+            <span class="prev" onclick="OnShow2()">&#10094;</span>
+            <span class="next" onclick="OnShow1()">&#10095;</span>
+        </div>
+
+        <div class="dots">
+            <div class="dot active1" onclick="listEnable(0)"></div>
+            <div class="dot" onclick="listEnable(1)"></div>
+            <div class="dot" onclick="listEnable(2)"></div>
+            <div class="dot" onclick="listEnable(3)"></div>
+        </div>
+  </div>
+
+    <script>
+
+        let slideList = document.getElementsByClassName("slide-list");
+        let dots = document.getElementsByClassName("dot");
+
+        let total = 4;
+        let current = 0;
+
+
+        function OnShow1() {
+
+            if (current == 3) {
+                current = 0;
+                // alert(current);
+                listEnable(current);
+            }
+            else {
+                current = current + 1;
+                // alert(current);
+                listEnable(current);
+            }
+
+
+        }
+
+        function OnShow2() {
+
+
+            if (current == 0) {
+                current = 3;
+                //alert(current);
+                listEnable(current);
+            }
+            else {
+                current = current - 1;
+                // alert(current);
+                listEnable(current);
+            }
+
+        }
+
+        function listEnable(a1) {
+            for (let index = 0; index < 4; index++) {
+
+                slideList[index].classList.remove("active");
+
+                dots[index].classList.remove("active1");
+
+                slideList[a1].classList.add("active");
+                dots[a1].classList.add("active1");
+                // alert(a1);
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
